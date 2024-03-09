@@ -99,6 +99,11 @@ DATABASES = {
     }
 }
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.codeanyapp.com",
+    "https://*.herokuapp.com"
+]
+
 
 #DATABASES = {
 #    'default': dj_database_url.parse(os.environ.get("postgres://wkksxuch:j64Oe5rfScLBJxVq9p8z3TJTr3_uie-A@flora.db.elephantsql.com/wkksxuch")),
