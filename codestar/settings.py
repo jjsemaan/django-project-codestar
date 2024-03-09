@@ -15,6 +15,7 @@ import os
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
+
     
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-q3-^(t-m0s(gm+hx8853(ul7@k56b(+=r$6df=6@5o@6iszner'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-jjsemaan-django-project-ea0taqkr7u.us1.codeanyapp.com', '.herokuapp.com']
 
@@ -78,12 +79,26 @@ WSGI_APPLICATION = 'codestar.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+#DATABASES = {
+#   'default': {
+#       'ENGINE': 'django.db.backends.sqlite3',
+#       'NAME': BASE_DIR / 'db.sqlite3',
+#       'default': dj_database_url.parse(os.environ.get("postgres://wkksxuch:j64Oe5rfScLBJxVq9p8z3TJTr3_uie-A@flora.db.elephantsql.com/wkksxuch"))
+#    }
+# }
+
+ # Database configuration
 DATABASES = {
-   'default': {
-       'ENGINE': 'django.db.backends.sqlite3',
-       'NAME': BASE_DIR / 'db.sqlite3',
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'wkksxuch',      # Your database name
+        'USER': 'wkksxuch',      # Your database username
+        'PASSWORD': 'j64Oe5rfScLBJxVq9p8z3TJTr3_uie-A',  # Your database password
+        'HOST': 'flora.db.elephantsql.com',     # Your host
+        'PORT': '5432',          # Your port
     }
- }
+}
+
 
 #DATABASES = {
 #    'default': dj_database_url.parse(os.environ.get("postgres://wkksxuch:j64Oe5rfScLBJxVq9p8z3TJTr3_uie-A@flora.db.elephantsql.com/wkksxuch")),
