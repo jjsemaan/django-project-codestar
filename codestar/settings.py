@@ -85,10 +85,12 @@ WSGI_APPLICATION = 'codestar.wsgi.application'
 #    }
 # }
 
+import dj_database_url
+
 DATABASES = {
-    'default': 
-dj_database_url.parse(os.environ.get("postgres://wkksxuch:j64Oe5rfScLBJxVq9p8z3TJTr3_uie-A@flora.db.elephantsql.com/wkksxuch"))
+    'default': dj_database_url.parse(os.environ.get("postgres://wkksxuch:j64Oe5rfScLBJxVq9p8z3TJTr3_uie-A@flora.db.elephantsql.com/wkksxuch")),
 }
+
 
 
 # Password validation
