@@ -94,7 +94,7 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://8000-ajgreaves-blog-lesson-pl-mjfxnpd4ht.us2.codeanyapp.com",
+    "https://8000-jjsemaan-django-project-ea0taqkr7u.us1.codeanyapp.com",
     "https://*.herokuapp.com"
 ]
 
