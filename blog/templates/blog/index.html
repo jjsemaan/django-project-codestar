@@ -20,6 +20,7 @@
                             </div>
                             <a href="#" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>
+                                <p class="card-text">{{ post.excerpt }}</p>
                             </a>
 
                             <hr />
@@ -48,9 +49,10 @@
     {% endif %}
 </div>
 
+<!-- index.html content ends here -->
 {% endblock %}
 
-<!-- index.html content ends here -->
+<!-- Footer copyright here -->
 {% block copyright %}
     Copyright 2023 Matt Rudge
 {% endblock %}
