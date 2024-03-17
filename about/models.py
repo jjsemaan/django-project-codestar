@@ -1,4 +1,6 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
+from django.db import models
 
 # Create your models here.
 
@@ -15,3 +17,10 @@ class About(models.Model):
 
     def __str__(self):
         return self.title
+
+class YourModel(models.Model):
+    image = CloudinaryField('image')
+    # Add other fields as needed
+
+class YourModel(models.Model):
+    image = models.ImageField(upload_to='images/', default='images/default.jpg')
